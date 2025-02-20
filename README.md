@@ -2,7 +2,7 @@
 
 [React Aria](https://react-spectrum.adobe.com/react-aria/)の実装・振る舞いに[Inhouse](https://github.com/pepabo/inhouse-components-web/)のスタイルを適用したUIコンポーネントを試せるサンプル集です。
 
-依存ライブラリを`npm install`して、ローカルサーバーを`npm run dev`で起動してください。
+依存ライブラリを`npm install`して、Storybookを`npm run storybook`で起動して開発してください。
 
 ## React + TypeScript + Vite
 
