@@ -1,0 +1,25 @@
+@use "@pepabo-inhouse/components-web" as inhouse;
+
+.selectbox {
+  @include inhouse.select-style(
+    $options: (
+      appearance: outlined,
+      color: neutral,
+      size: m,
+      width: half,
+    )
+  );
+  & ._select {
+    text-align: left;
+  }
+}
+
+.dropdown {
+  @include inhouse.elevation(1);
+  background-color: inhouse.get-surface-color(light, secondary);
+  @include inhouse.interactive-list-style(
+    $option: (
+      density: dense,
+    )
+  );
+}
