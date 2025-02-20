@@ -59,10 +59,31 @@ const SHAPES = ['square', 'circle'] as const;
 const SIZES = ['xs', 's', 'm', 'l', 'xl'] as const;
 const WIDTHS = ['auto', 'third', 'half', 'full'] as const;
 const BRIGHTNESSES = ['light', 'dark'] as const;
+const STATES = ['hover', 'focused', 'disabled'] as const;
 
 export const Index: Story = {
   render: () => (
     <div>
+      <h2>state</h2>
+      <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+        <Button 
+          onClick={() => alert("送信完了")} 
+          label="Default" 
+          appearance="flat"
+          color="neutral"
+        />
+        {STATES.map((state) => (
+          <Button 
+            key={state}
+            onClick={() => alert("送信完了")} 
+            label={state} 
+            appearance="flat"
+            color="neutral"
+            state={state}
+          />
+        ))}
+      </div>
+
       <h2>appearance</h2>
       <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
         {APPEARANCES.map((appearance) => (
